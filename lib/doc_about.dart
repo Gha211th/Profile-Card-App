@@ -25,4 +25,30 @@
  *  => untuk konfigurasi web
  * 11. windows
  *  => untuk konfigurasi windows
+ * 12. pubspec.yaml
+ *  => tempat konfigurasi aplikasi
+ *  => menambahkan library
+ *  => menambahkan asset (gambar, font, dll)
+ * 
+ * di terminal
+ * 
+ * kegunaan perintah "flutter pub get"
+ * => untuk mensyncron library yang ada di pubspec.yaml
+ * 
+ * kegunaan perintah "flutter pub upgrade"
+ * => mengupgrade library yang ada di pubspec.yaml
+ * 
+ * kegunaan perintah "flutter run"
+ * => menjalankan aplikasi
+ * 
+ * kegunaan perintah "flutter clean"
+ * => membersihkan file build
+ * 
+ * library dari flutter bisa dilihat di pub.dev
+ * 
+ * di dalam dart ada 2 statement
+ * 1. stateless widget
+ *  => widget yang tidak memiliki state (static)
+ * 2. stateful widget
+ *  => widget yang memiliki state (dynamic)
  */
