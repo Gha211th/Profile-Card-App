@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromARGB(255, 0, 0, 0),
         ),
       ),
-      home: const MyHomePage(title: 'Ngawi Of Champion'),
+      home: const MyHomePage(title: 'About You 1975'),
     );
   }
 }
