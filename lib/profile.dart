@@ -5,6 +5,9 @@ class ProfileCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Scaffold(), debugShowCheckedModeBanner: false);
+    return MaterialApp(home: Scaffold(
+      appBar: ,
+      body: ,
+    ), debugShowCheckedModeBanner: false);
   }
 }
