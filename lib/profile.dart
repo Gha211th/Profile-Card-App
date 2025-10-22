@@ -8,13 +8,13 @@ class ProfileCard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(title: Text("Hello title")),
+        appBar: AppBar(title: Text("nothing happen")),
         body: Column(
           children: [
             Container(
               width: 200,
               child: Text(
-                "hello ges",
+                "Second day",
                 style: TextStyle(
                   color: Colors.amber,
                   fontSize: 30,
