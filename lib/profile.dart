@@ -14,7 +14,7 @@ class ProfileCard extends StatelessWidget {
             Container(
               width: 200,
               child: Text(
-                "Shell is going to be better",
+                "Shell is going sure?",
                 style: TextStyle(
                   color: Colors.amber,
                   fontSize: 30,
