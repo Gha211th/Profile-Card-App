@@ -14,7 +14,12 @@ class ProfileCard extends StatelessWidget {
         ),
       ),
       body: Center(
-        child: Column(children: [Text("agha haga"), Text("maga agha")]),
+        child: Column(
+          children: [
+            Text("agha haga", style: TextStyle(color: Colors.amber)),
+            Text("maga agha", style: TextStyle(color: Colors.amber)),
+          ],
+        ),
       ),
     );
   }
