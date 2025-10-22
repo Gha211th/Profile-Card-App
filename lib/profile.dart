@@ -18,6 +18,14 @@ class ProfileCard extends StatelessWidget {
           children: [
             Text("agha haga", style: TextStyle(color: Colors.amber)),
             Text("maga agha", style: TextStyle(color: Colors.amber)),
+            Text(
+              "aku pun rada gila",
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: fontWeight.bold,
+              ),
+            ),
+            Text("halo dunia"),
           ],
         ),
       ),
