@@ -19,7 +19,7 @@ class ProfileCard extends StatelessWidget {
           children: [
             Container(
               width: MediaQuery.of(context).size.width * 0.8,
-              height: 100,
+              height: 250,
               decoration: BoxDecoration(
                 color: Color.fromRGBO(102, 161, 216, 1),
                 boxShadow: [
@@ -35,7 +35,7 @@ class ProfileCard extends StatelessWidget {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 10.0),
+                    padding: const EdgeInsets.symmetric(vertical: 10),
                     child: Text(
                       "Name",
                       style: TextStyle(
@@ -47,6 +47,29 @@ class ProfileCard extends StatelessWidget {
                   ),
                   // SizedBox(height: EdgeInsets.only()),
                   Text("agha haga", style: TextStyle(color: Colors.white)),
+                  Row(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(left: 100.0, top: 10.0),
+                        child: Column(
+                          children: [
+                            Container(
+                              width: MediaQuery.of(context).size.width * 0.1,
+                              decoration: BoxDecoration(
+                                color: Color.fromRGBO(62, 105, 144, 1),
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text("addres"),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Column(),
+                    ],
+                  ),
                 ],
               ),
             ),
