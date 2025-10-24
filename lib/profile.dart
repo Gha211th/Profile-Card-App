@@ -23,24 +23,65 @@ class ProfileCard extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              Text(
-                "Agha Ar-Rafif".toUpperCase(),
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+              Container(
+                decoration: BoxDecoration(
+                  color: Color.fromRGBO(255, 72, 72, 1),
+                  border: Border.all(color: Colors.black, width: 2),
+                  boxShadow: [
+                    BoxShadow(color: Colors.black, offset: Offset(4, 4)),
+                  ],
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 5.0,
+                    bottom: 5.0,
+                    left: 15.0,
+                    right: 15.0,
+                  ),
+                  child: Text(
+                    "Agha Ar-Rafif".toUpperCase(),
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+                  ),
+                ),
               ),
-              Text(
-                "~ Student of SMP IDN BS SOLO ~",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 10,
-                  fontWeight: FontWeight.w400,
+              SizedBox(height: 8),
+              Container(
+                decoration: BoxDecoration(
+                  color: Color.fromRGBO(102, 161, 216, 1),
+                  border: Border.all(color: Colors.black, width: 2),
+                  boxShadow: [
+                    BoxShadow(color: Colors.black, offset: Offset(4, 4)),
+                  ],
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 5.0,
+                    bottom: 5.0,
+                    left: 20.0,
+                    right: 20.0,
+                  ),
+                  child: Text(
+                    "~ Student of SMP IDN BS SOLO ~",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 10,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
                 ),
               ),
               SizedBox(height: 10),
               Container(
                 decoration: BoxDecoration(
                   color: Color.fromRGBO(255, 222, 89, 1),
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: 
+                  border: Border.all(color: Colors.black, width: 2),
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 0,
+                      color: Colors.black,
+                      offset: const Offset(6, 6),
+                    ),
+                  ],
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -53,17 +94,19 @@ class ProfileCard extends StatelessWidget {
               ),
               SizedBox(height: 15),
               Container(
-                decoration: BoxDecoration(),
+                decoration: BoxDecoration(
+                  color: Color.fromRGBO(104, 180, 143, 1),
+                  border: Border.all(color: Colors.black, width: 2),
+                  boxShadow: [
+                    BoxShadow(color: Colors.black, offset: Offset(4, 4)),
+                  ],
+                ),
                 child: Row(
                   children: [
                     Container(
                       width: 60,
                       height: 60,
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(255, 222, 89, 1),
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                      child: Icon(Icons.android, color: Colors.white, size: 30),
+                      child: Icon(Icons.android, color: Colors.black, size: 40),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -72,7 +115,10 @@ class ProfileCard extends StatelessWidget {
                         children: [
                           Text(
                             "Android Dev",
-                            style: TextStyle(fontWeight: FontWeight.w600),
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              color: Colors.black,
+                            ),
                           ),
                           Text(
                             "100 APK Project",
