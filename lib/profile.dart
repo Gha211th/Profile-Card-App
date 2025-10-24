@@ -56,12 +56,13 @@ class ProfileCard extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           "Android Dev",
                           style: TextStyle(fontWeight: FontWeight.w600),
                         ),
-                        Text("100 APK Project"),
+                        Text("100 APK Project", style: TextStyle(fontSize: 8)),
                       ],
                     ),
                   ),
