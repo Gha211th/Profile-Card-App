@@ -17,7 +17,15 @@ class ProfileCard extends StatelessWidget {
         ),
         backgroundColor: Colors.black,
       ),
-      body: Column(children: [Text("Agha Ar-Rafif"),]),
+      body: Column(
+        children: [
+          Text(
+            "Agha Ar-Rafif",
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+            textAlign: TextAlign.center,
+          ),
+        ],
+      ),
     );
   }
 }
