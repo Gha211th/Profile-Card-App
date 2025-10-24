@@ -10,6 +10,9 @@ class Mainpage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: ProfileCard());
+    return const MaterialApp(
+      home: ProfileCard(),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }

@@ -19,7 +19,7 @@ class ProfileCard extends StatelessWidget {
           children: [
             Container(
               width: MediaQuery.of(context).size.width * 0.8,
-              height: 250,
+              height: 300,
               decoration: BoxDecoration(
                 color: Color.fromRGBO(102, 161, 216, 1),
                 boxShadow: [
@@ -45,29 +45,62 @@ class ProfileCard extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // SizedBox(height: EdgeInsets.only()),
+                  SizedBox(),
                   Text("agha haga", style: TextStyle(color: Colors.white)),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Padding(
-                        padding: const EdgeInsets.only(left: 100.0, top: 10.0),
+                        padding: const EdgeInsets.all(8.0),
                         child: Column(
                           children: [
                             Container(
-                              width: MediaQuery.of(context).size.width * 0.1,
+                              height: 50,
                               decoration: BoxDecoration(
                                 color: Color.fromRGBO(62, 105, 144, 1),
-                                borderRadius: BorderRadius.circular(5),
+                                borderRadius: BorderRadius.circular(10),
                               ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text("addres"),
+                              child: Center(
+                                child: Text(
+                                  "addres",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                  ),
+                                ),
                               ),
                             ),
                           ],
                         ),
                       ),
-                      Column(),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 50,
+
+                              decoration: BoxDecoration(
+                                color: Color.fromRGBO(62, 105, 144, 1),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+
+                                child: Center(
+                                  child: Text(
+                                    "tempat tanggal lahir",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: 'RobotoMono',
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ],
