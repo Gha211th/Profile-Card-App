@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/profile.dart';
 
 void main() {
-  runApp(Mainpage());
+  runApp(FisrtProfile());
 }
 
-class Mainpage extends StatelessWidget {
-  const Mainpage({super.key});
+class FisrtProfile extends StatelessWidget {
+  const FisrtProfile({super.key});
 
   @override
   Widget build(BuildContext context) {
