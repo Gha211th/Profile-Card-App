@@ -159,14 +159,22 @@ class ProfileCard extends StatelessWidget {
                     ],
                   ),
                 ),
+                SizedBox(height: 10),
                 Container(
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(255, 72, 72, 1),
+                    border: Border.all(color: Colors.black, width: 2),
+                    boxShadow: [
+                      BoxShadow(color: Colors.black, offset: Offset(5, 5)),
+                    ],
+                  ),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                       vertical: 10,
-                      horizontal: 5,
+                      horizontal: 50,
                     ),
                     child: Text(
-                      "~ Schedule ~",
+                      "~ My Schedule ~",
                       style: TextStyle(
                         fontFamily: 'RobotoMono',
                         fontWeight: FontWeight.w700,
@@ -174,74 +182,113 @@ class ProfileCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
+                SizedBox(height: 10),
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(102, 161, 216, 1),
+                    border: Border.all(color: Colors.black, width: 2),
+                    boxShadow: [
+                      BoxShadow(color: Colors.black, offset: Offset(6, 6)),
+                    ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 50,
+                      vertical: 20,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          'Ngoding',
-                          style: TextStyle(
-                            fontFamily: 'RobotoMono',
-                            fontWeight: FontWeight.w700,
-                            fontSize: 13,
-                          ),
+                        Column(
+                          children: [
+                            Text(
+                              'Ngoding',
+                              style: TextStyle(
+                                fontFamily: 'RobotoMono',
+                                fontWeight: FontWeight.w700,
+                                fontSize: 13,
+                              ),
+                            ),
+                            Icon(Icons.timer),
+                            Text(
+                              '07:00 - 08:30',
+                              style: TextStyle(
+                                fontFamily: 'RobotoMono',
+                                fontWeight: FontWeight.w600,
+                                fontSize: 7,
+                              ),
+                            ),
+                          ],
                         ),
-                        Icon(Icons.timer),
-                        Text(
-                          '07:00 - 08:30',
-                          style: TextStyle(
-                            fontFamily: 'RobotoMono',
-                            fontWeight: FontWeight.w600,
-                            fontSize: 7,
-                          ),
+                        Column(
+                          children: [
+                            Text(
+                              "Membaca",
+                              style: TextStyle(
+                                fontFamily: 'RobotoMono',
+                                fontWeight: FontWeight.w700,
+                                fontSize: 13,
+                              ),
+                            ),
+                            Icon(Icons.book),
+                            Text(
+                              "13:00 - 13:30",
+                              style: TextStyle(
+                                fontFamily: "RobotoMono",
+                                fontWeight: FontWeight.w600,
+                                fontSize: 7,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "Ngegame",
+                              style: TextStyle(
+                                fontFamily: 'RobotoMono',
+                                fontWeight: FontWeight.w700,
+                                fontSize: 13,
+                              ),
+                            ),
+                            Icon(Icons.laptop),
+                            Text(
+                              "19:15 - 21:00",
+                              style: TextStyle(
+                                fontSize: 7,
+                                fontFamily: 'RobotoMono',
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "Tidur",
+                              style: TextStyle(
+                                fontFamily: 'RobotoMono',
+                                fontSize: 13,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                            Icon(Icons.bed),
+                            Text(
+                              "21:30 - 3:50",
+                              style: TextStyle(
+                                fontFamily: 'RobotoMono',
+                                fontWeight: FontWeight.w600,
+                                fontSize: 7,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
-                    Column(
-                      children: [
-                        Text(
-                          "Membaca",
-                          style: TextStyle(
-                            fontFamily: 'RobotoMono',
-                            fontWeight: FontWeight.w700,
-                            fontSize: 13,
-                          ),
-                        ),
-                        Icon(Icons.book),
-                        Text(
-                          "13:00 - 13:30",
-                          style: TextStyle(
-                            fontFamily: "RobotoMono",
-                            fontWeight: FontWeight.w600,
-                            fontSize: 7,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Text(
-                          "Ngegame",
-                          style: TextStyle(
-                            fontFamily: 'RobotoMono',
-                            fontWeight: FontWeight.w700,
-                            fontSize: 13,
-                          ),
-                        ),
-                        Icon(Icons.laptop),
-                        Text(
-                          "19:15 - 21:00",
-                          style: TextStyle(
-                            fontSize: 7,
-                            fontFamily: 'RobotoMono',
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+                  ),
                 ),
+                SizedBox(height: 20),
               ],
             ),
           ),
