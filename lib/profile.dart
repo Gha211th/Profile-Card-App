@@ -23,6 +23,11 @@ class ProfileCard extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
+              CircleAvatar(
+                radius: 60,
+                backgroundImage: NetworkImage('assets/profile.png'),
+              ),
+              SizedBox(height: 10),
               Container(
                 decoration: BoxDecoration(
                   color: Color.fromRGBO(255, 72, 72, 1),
@@ -98,7 +103,7 @@ class ProfileCard extends StatelessWidget {
                   color: Color.fromRGBO(104, 180, 143, 1),
                   border: Border.all(color: Colors.black, width: 2),
                   boxShadow: [
-                    BoxShadow(color: Colors.black, offset: Offset(4, 4)),
+                    BoxShadow(color: Colors.black, offset: Offset(6, 6)),
                   ],
                 ),
                 child: Row(
@@ -130,6 +135,7 @@ class ProfileCard extends StatelessWidget {
                   ],
                 ),
               ),
+              Text("~ My Experience ~"),
             ],
           ),
         ),
