@@ -23,9 +23,18 @@ class ProfileCard extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              CircleAvatar(
-                radius: 60,
-                backgroundImage: NetworkImage('assets/profile.png'),
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black, width: 3),
+                  boxShadow: [
+                    BoxShadow(color: Colors.black, offset: Offset(-6, 6)),
+                  ],
+                ),
+                child: Image.asset(
+                  'assets/profile.png',
+                  height: 150,
+                  width: 150,
+                ),
               ),
               SizedBox(height: 10),
               Container(
@@ -45,7 +54,11 @@ class ProfileCard extends StatelessWidget {
                   ),
                   child: Text(
                     "Agha Ar-Rafif".toUpperCase(),
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w800,
+                      fontFamily: 'RobotoMono',
+                    ),
                   ),
                 ),
               ),
@@ -114,7 +127,7 @@ class ProfileCard extends StatelessWidget {
                       child: Icon(Icons.android, color: Colors.black, size: 40),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(5.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -123,11 +136,17 @@ class ProfileCard extends StatelessWidget {
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
                               color: Colors.black,
+                              fontFamily: 'RobotoMono',
                             ),
                           ),
                           Text(
                             "100 APK Project",
-                            style: TextStyle(fontSize: 8),
+                            style: TextStyle(
+                              fontSize: 8,
+                              fontFamily: 'RobotoMono',
+                              fontWeight: FontWeight.w600,
+                              letterSpacing: 1,
+                            ),
                           ),
                         ],
                       ),
@@ -135,7 +154,19 @@ class ProfileCard extends StatelessWidget {
                   ],
                 ),
               ),
-              Text("~ My Experience ~"),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 5,
+                ),
+                child: Text(
+                  "~ Schedule ~",
+                  style: TextStyle(
+                    fontFamily: 'RobotoMono',
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
             ],
           ),
         ),
