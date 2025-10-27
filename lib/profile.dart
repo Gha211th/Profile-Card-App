@@ -167,6 +167,7 @@ class ProfileCard extends StatelessWidget {
                   ),
                 ),
               ),
+              Row(children: [Column()]),
             ],
           ),
         ),
