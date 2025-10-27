@@ -172,12 +172,38 @@ class ProfileCard extends StatelessWidget {
                 children: [
                   Column(
                     children: [
-                      Icon(Icons.timer),
                       Text(
                         'Ngoding',
                         style: TextStyle(
                           fontFamily: 'RobotoMono',
                           fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      Icon(Icons.timer),
+                      Text(
+                        '07:00 - 08:30',
+                        style: TextStyle(
+                          fontFamily: 'RobotoMono',
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Text(
+                        "Membaca",
+                        style: TextStyle(
+                          fontFamily: 'RobotoMono',
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      Icon(Icons.book),
+                      Text(
+                        "13:00 - 13:30",
+                        style: TextStyle(
+                          fontFamily: "RobotoMono",
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ],
