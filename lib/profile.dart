@@ -169,7 +169,18 @@ class ProfileCard extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Column(children: [Icon(Icons.timer)]),
+                  Column(
+                    children: [
+                      Icon(Icons.timer),
+                      Text(
+                        'Ngoding',
+                        style: TextStyle(
+                          fontFamily: 'RobotoMono',
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ],
