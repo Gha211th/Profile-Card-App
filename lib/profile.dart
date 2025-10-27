@@ -27,7 +27,7 @@ class ProfileCard extends StatelessWidget {
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.black, width: 3),
                   boxShadow: [
-                    BoxShadow(color: Colors.black, offset: Offset(-6, 6)),
+                    BoxShadow(color: Colors.black, offset: Offset(6, 6)),
                   ],
                 ),
                 child: Image.asset(
