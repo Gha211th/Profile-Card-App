@@ -37,7 +37,8 @@ class ProfileCard extends StatelessWidget {
                     width: 150,
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 20),
+                // container "nama"
                 Container(
                   decoration: BoxDecoration(
                     color: Color.fromRGBO(255, 72, 72, 1),
@@ -64,6 +65,7 @@ class ProfileCard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 8),
+                // container "student of smp idn bs solo"
                 Container(
                   decoration: BoxDecoration(
                     color: Color.fromRGBO(102, 161, 216, 1),
@@ -89,7 +91,7 @@ class ProfileCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 15),
                 Container(
                   decoration: BoxDecoration(
                     color: Color.fromRGBO(255, 222, 89, 1),
@@ -111,7 +113,33 @@ class ProfileCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 20),
+                // container title "MY SKILL"
+                Container(
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(255, 72, 72, 1),
+                    border: Border.all(color: Colors.black, width: 2),
+                    boxShadow: [
+                      BoxShadow(color: Colors.black, offset: Offset(5, 5)),
+                    ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 50,
+                      vertical: 10,
+                    ),
+                    child: Text(
+                      "~ My Skill ~",
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontFamily: 'RobotoMono',
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 10),
+                // container "android dev"
                 Container(
                   decoration: BoxDecoration(
                     color: Color.fromRGBO(104, 180, 143, 1),
@@ -159,7 +187,106 @@ class ProfileCard extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 15),
+                // container game dev
+                Container(
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(104, 180, 143, 1),
+                    border: Border.all(color: Colors.black, width: 2),
+                    boxShadow: [
+                      BoxShadow(color: Colors.black, offset: Offset(6, 6)),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 60,
+                        height: 60,
+                        child: Icon(
+                          Icons.gamepad,
+                          color: Colors.black,
+                          size: 40,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Scratch Game Dev",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black,
+                                fontFamily: 'RobotoMono',
+                              ),
+                            ),
+                            Text(
+                              "12 game Project",
+                              style: TextStyle(
+                                fontSize: 8,
+                                fontFamily: 'RobotoMono',
+                                fontWeight: FontWeight.w600,
+                                letterSpacing: 1,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 15),
+                // container UI/UX Design
+                Container(
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(104, 180, 143, 1),
+                    border: Border.all(color: Colors.black, width: 2),
+                    boxShadow: [
+                      BoxShadow(color: Colors.black, offset: Offset(6, 6)),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 60,
+                        height: 60,
+                        child: Icon(
+                          Icons.design_services,
+                          color: Colors.black,
+                          size: 40,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "UI/UX Design",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black,
+                                fontFamily: 'RobotoMono',
+                              ),
+                            ),
+                            Text(
+                              "12 game Project",
+                              style: TextStyle(
+                                fontSize: 8,
+                                fontFamily: 'RobotoMono',
+                                fontWeight: FontWeight.w600,
+                                letterSpacing: 1,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 20),
+                // container "my schedule"
                 Container(
                   decoration: BoxDecoration(
                     color: Color.fromRGBO(255, 72, 72, 1),
@@ -178,29 +305,28 @@ class ProfileCard extends StatelessWidget {
                       style: TextStyle(
                         fontFamily: 'RobotoMono',
                         fontWeight: FontWeight.w700,
+                        fontSize: 15,
                       ),
                     ),
                   ),
                 ),
                 SizedBox(height: 10),
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.5,
-                  decoration: BoxDecoration(
-                    color: Color.fromRGBO(102, 161, 216, 1),
-                    border: Border.all(color: Colors.black, width: 2),
-                    boxShadow: [
-                      BoxShadow(color: Colors.black, offset: Offset(6, 6)),
-                    ],
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 50,
-                      vertical: 20,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
+                // container untuk list schedule
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    // container buat "ngoding"
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color.fromRGBO(102, 161, 216, 1),
+                        border: Border.all(color: Colors.black, width: 2),
+                        boxShadow: [
+                          BoxShadow(color: Colors.black, offset: Offset(4, 4)),
+                        ],
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
                           children: [
                             Text(
                               'Ngoding',
@@ -210,7 +336,7 @@ class ProfileCard extends StatelessWidget {
                                 fontSize: 13,
                               ),
                             ),
-                            Icon(Icons.timer),
+                            Icon(Icons.code),
                             Text(
                               '07:00 - 08:30',
                               style: TextStyle(
@@ -221,7 +347,20 @@ class ProfileCard extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Column(
+                      ),
+                    ),
+                    // container buat "membaca"
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color.fromRGBO(102, 161, 216, 1),
+                        border: Border.all(color: Colors.black, width: 2),
+                        boxShadow: [
+                          BoxShadow(color: Colors.black, offset: Offset(4, 4)),
+                        ],
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
                           children: [
                             Text(
                               "Membaca",
@@ -242,10 +381,23 @@ class ProfileCard extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Column(
+                      ),
+                    ),
+                    // container buat "Belajar"
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color.fromRGBO(102, 161, 216, 1),
+                        border: Border.all(color: Colors.black, width: 2),
+                        boxShadow: [
+                          BoxShadow(color: Colors.black, offset: Offset(4, 4)),
+                        ],
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
                           children: [
                             Text(
-                              "Ngegame",
+                              "Belajar",
                               style: TextStyle(
                                 fontFamily: 'RobotoMono',
                                 fontWeight: FontWeight.w700,
@@ -254,16 +406,29 @@ class ProfileCard extends StatelessWidget {
                             ),
                             Icon(Icons.laptop),
                             Text(
-                              "19:15 - 21:00",
+                              "13:00 - 13:30",
                               style: TextStyle(
-                                fontSize: 7,
-                                fontFamily: 'RobotoMono',
+                                fontFamily: "RobotoMono",
                                 fontWeight: FontWeight.w600,
+                                fontSize: 7,
                               ),
                             ),
                           ],
                         ),
-                        Column(
+                      ),
+                    ),
+                    // container "tidur"
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Color.fromRGBO(102, 161, 216, 1),
+                        border: Border.all(color: Colors.black, width: 2),
+                        boxShadow: [
+                          BoxShadow(color: Colors.black, offset: Offset(4, 4)),
+                        ],
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
                           children: [
                             Text(
                               "Tidur",
@@ -284,9 +449,9 @@ class ProfileCard extends StatelessWidget {
                             ),
                           ],
                         ),
-                      ],
+                      ),
                     ),
-                  ),
+                  ],
                 ),
                 SizedBox(height: 20),
               ],
