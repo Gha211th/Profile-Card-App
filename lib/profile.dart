@@ -318,7 +318,7 @@ class ProfileCard extends StatelessWidget {
                     // container buat "ngoding"
                     Container(
                       decoration: BoxDecoration(
-                        color: Color.fromRGBO(102, 161, 216, 1),
+                        color: Color.fromRGBO(104, 180, 143, 1),
                         border: Border.all(color: Colors.black, width: 2),
                         boxShadow: [
                           BoxShadow(color: Colors.black, offset: Offset(4, 4)),
@@ -352,7 +352,7 @@ class ProfileCard extends StatelessWidget {
                     // container buat "membaca"
                     Container(
                       decoration: BoxDecoration(
-                        color: Color.fromRGBO(102, 161, 216, 1),
+                        color: Color.fromRGBO(104, 180, 143, 1),
                         border: Border.all(color: Colors.black, width: 2),
                         boxShadow: [
                           BoxShadow(color: Colors.black, offset: Offset(4, 4)),
@@ -420,7 +420,7 @@ class ProfileCard extends StatelessWidget {
                     // container "tidur"
                     Container(
                       decoration: BoxDecoration(
-                        color: Color.fromRGBO(102, 161, 216, 1),
+                        color: Color.fromRGBO(104, 180, 143, 1),
                         border: Border.all(color: Colors.black, width: 2),
                         boxShadow: [
                           BoxShadow(color: Colors.black, offset: Offset(4, 4)),
