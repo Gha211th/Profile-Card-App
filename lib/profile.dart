@@ -25,21 +25,7 @@ class ProfileCard extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black, width: 3),
-                    boxShadow: [
-                      BoxShadow(color: Colors.black, offset: Offset(6, 6)),
-                    ],
-                  ),
-                  child: Image.asset(
-                    'assets/profile.png',
-                    height: 150,
-                    width: 150,
-                  ),
-                ),
-                SizedBox(height: 20),
-                // container "nama"
-                Container(
+                  width: double.infinity,
                   decoration: BoxDecoration(
                     color: Color.fromRGBO(255, 72, 72, 1),
                     border: Border.all(color: Colors.black, width: 2),
@@ -61,12 +47,29 @@ class ProfileCard extends StatelessWidget {
                         fontWeight: FontWeight.w800,
                         fontFamily: 'RobotoMono',
                       ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
                 SizedBox(height: 8),
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.black, width: 3),
+                    boxShadow: [
+                      BoxShadow(color: Colors.black, offset: Offset(6, 6)),
+                    ],
+                  ),
+                  child: Image.asset(
+                    'assets/profile.png',
+                    height: 150,
+                    width: 150,
+                  ),
+                ),
+                SizedBox(height: 15),
+
                 // container "student of smp idn bs solo"
                 Container(
+                  width: double.infinity,
                   decoration: BoxDecoration(
                     color: Color.fromRGBO(102, 161, 216, 1),
                     border: Border.all(color: Colors.black, width: 2),
@@ -88,11 +91,13 @@ class ProfileCard extends StatelessWidget {
                         fontSize: 10,
                         fontWeight: FontWeight.w600,
                       ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
                 SizedBox(height: 15),
                 Container(
+                  width: double.infinity,
                   decoration: BoxDecoration(
                     color: Color.fromRGBO(255, 222, 89, 1),
                     border: Border.all(color: Colors.black, width: 2),
@@ -116,6 +121,7 @@ class ProfileCard extends StatelessWidget {
                 SizedBox(height: 20),
                 // container title "MY SKILL"
                 Container(
+                  width: double.infinity,
                   decoration: BoxDecoration(
                     color: Color.fromRGBO(255, 72, 72, 1),
                     border: Border.all(color: Colors.black, width: 2),
@@ -135,6 +141,7 @@ class ProfileCard extends StatelessWidget {
                         fontFamily: 'RobotoMono',
                         fontWeight: FontWeight.w700,
                       ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
@@ -288,6 +295,7 @@ class ProfileCard extends StatelessWidget {
                 SizedBox(height: 20),
                 // container "my schedule"
                 Container(
+                  width: double.infinity,
                   decoration: BoxDecoration(
                     color: Color.fromRGBO(255, 72, 72, 1),
                     border: Border.all(color: Colors.black, width: 2),
@@ -307,6 +315,7 @@ class ProfileCard extends StatelessWidget {
                         fontWeight: FontWeight.w700,
                         fontSize: 15,
                       ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
@@ -316,141 +325,134 @@ class ProfileCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     // container buat "ngoding"
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(104, 180, 143, 1),
-                        border: Border.all(color: Colors.black, width: 2),
-                        boxShadow: [
-                          BoxShadow(color: Colors.black, offset: Offset(4, 4)),
-                        ],
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Text(
-                              'Ngoding',
-                              style: TextStyle(
-                                fontFamily: 'RobotoMono',
-                                fontWeight: FontWeight.w700,
-                                fontSize: 13,
-                              ),
-                            ),
-                            Icon(Icons.code),
-                            Text(
-                              '07:00 - 08:30',
-                              style: TextStyle(
-                                fontFamily: 'RobotoMono',
-                                fontWeight: FontWeight.w600,
-                                fontSize: 7,
-                              ),
+                    Expanded(
+                      flex: 2,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(102, 161, 216, 1),
+                          border: Border.all(color: Colors.black, width: 2),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black,
+                              offset: Offset(4, 4),
                             ),
                           ],
                         ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              Text(
+                                'Ngoding',
+                                style: TextStyle(
+                                  fontFamily: 'RobotoMono',
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 13,
+                                ),
+                              ),
+                              Icon(Icons.code),
+                              Text(
+                                '07:00 - 08:30',
+                                style: TextStyle(
+                                  fontFamily: 'RobotoMono',
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 7,
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ),
+                    SizedBox(width: 10),
                     // container buat "membaca"
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(104, 180, 143, 1),
-                        border: Border.all(color: Colors.black, width: 2),
-                        boxShadow: [
-                          BoxShadow(color: Colors.black, offset: Offset(4, 4)),
-                        ],
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Text(
-                              "Membaca",
-                              style: TextStyle(
-                                fontFamily: 'RobotoMono',
-                                fontWeight: FontWeight.w700,
-                                fontSize: 13,
-                              ),
-                            ),
-                            Icon(Icons.book),
-                            Text(
-                              "13:00 - 13:30",
-                              style: TextStyle(
-                                fontFamily: "RobotoMono",
-                                fontWeight: FontWeight.w600,
-                                fontSize: 7,
-                              ),
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(102, 161, 216, 1),
+                          border: Border.all(color: Colors.black, width: 2),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black,
+                              offset: Offset(4, 4),
                             ),
                           ],
                         ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            child: Column(
+                              children: [
+                                Text(
+                                  "Membaca",
+                                  style: TextStyle(
+                                    fontFamily: 'RobotoMono',
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 13,
+                                  ),
+                                ),
+                                Icon(Icons.book),
+                                Text(
+                                  "13:00 - 13:30",
+                                  style: TextStyle(
+                                    fontFamily: "RobotoMono",
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 7,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ),
                     ),
+                    SizedBox(width: 10),
                     // container buat "Belajar"
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(102, 161, 216, 1),
-                        border: Border.all(color: Colors.black, width: 2),
-                        boxShadow: [
-                          BoxShadow(color: Colors.black, offset: Offset(4, 4)),
-                        ],
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Text(
-                              "Belajar",
-                              style: TextStyle(
-                                fontFamily: 'RobotoMono',
-                                fontWeight: FontWeight.w700,
-                                fontSize: 13,
-                              ),
-                            ),
-                            Icon(Icons.laptop),
-                            Text(
-                              "13:00 - 13:30",
-                              style: TextStyle(
-                                fontFamily: "RobotoMono",
-                                fontWeight: FontWeight.w600,
-                                fontSize: 7,
-                              ),
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(102, 161, 216, 1),
+                          border: Border.all(color: Colors.black, width: 2),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black,
+                              offset: Offset(4, 4),
                             ),
                           ],
                         ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              Text(
+                                "Belajar",
+                                style: TextStyle(
+                                  fontFamily: 'RobotoMono',
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 13,
+                                ),
+                              ),
+                              Icon(Icons.laptop),
+                              Text(
+                                "13:00 - 13:30",
+                                style: TextStyle(
+                                  fontFamily: "RobotoMono",
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 7,
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ),
+
                     // container "tidur"
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(104, 180, 143, 1),
-                        border: Border.all(color: Colors.black, width: 2),
-                        boxShadow: [
-                          BoxShadow(color: Colors.black, offset: Offset(4, 4)),
-                        ],
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Text(
-                              "Tidur",
-                              style: TextStyle(
-                                fontFamily: 'RobotoMono',
-                                fontSize: 13,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            Icon(Icons.bed),
-                            Text(
-                              "21:30 - 3:50",
-                              style: TextStyle(
-                                fontFamily: 'RobotoMono',
-                                fontWeight: FontWeight.w600,
-                                fontSize: 7,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
                   ],
                 ),
                 SizedBox(height: 20),
