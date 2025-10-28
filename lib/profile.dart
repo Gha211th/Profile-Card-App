@@ -95,6 +95,16 @@ class ProfileCard extends StatelessWidget {
                     ),
                   ),
                 ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    border: Border.all(color: Colors.black, width: 2),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("~< 9 GRADE >~"),
+                  ),
+                ),
                 SizedBox(height: 15),
                 Container(
                   width: double.infinity,
@@ -326,7 +336,7 @@ class ProfileCard extends StatelessWidget {
                   children: [
                     // container buat "ngoding"
                     Expanded(
-                      flex: 2,
+                      flex: 1,
                       child: Container(
                         decoration: BoxDecoration(
                           color: Color.fromRGBO(102, 161, 216, 1),
