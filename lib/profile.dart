@@ -506,13 +506,33 @@ class ProfileCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 20),
                 Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(255, 72, 72, 1),
+                    border: Border.all(color: Colors.black, width: 2),
+                    boxShadow: [
+                      BoxShadow(color: Colors.black, offset: Offset(5, 5)),
+                    ],
+                  ),
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text("~ My Achievement ~"),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 60,
+                      vertical: 10,
+                    ),
+                    child: Text(
+                      "~ My Ordinary ~",
+                      style: TextStyle(
+                        fontFamily: 'RobotoMono',
+                        fontWeight: FontWeight.w700,
+                        fontSize: 15,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
+                SizedBox(height: 10),
                 SizedBox(
                   height: 110,
                   child: ListView(
@@ -523,7 +543,16 @@ class ProfileCard extends StatelessWidget {
                         child: Container(
                           width: 100,
                           height: 100,
-                          decoration: BoxDecoration(color: Colors.amberAccent),
+                          decoration: BoxDecoration(
+                            color: Colors.amberAccent,
+                            border: Border.all(color: Colors.black, width: 2),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black,
+                                offset: Offset(4, 4),
+                              ),
+                            ],
+                          ),
                           child: Center(
                             child: Text('${e}', style: TextStyle(fontSize: 60)),
                           ),
@@ -532,7 +561,33 @@ class ProfileCard extends StatelessWidget {
                     }).toList(),
                   ),
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 20),
+                Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(255, 72, 72, 1),
+                    border: Border.all(color: Colors.black, width: 2),
+                    boxShadow: [
+                      BoxShadow(color: Colors.black, offset: Offset(5, 5)),
+                    ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 60,
+                      vertical: 10,
+                    ),
+                    child: Text(
+                      "~ Picture ~",
+                      style: TextStyle(
+                        fontFamily: 'RobotoMono',
+                        fontWeight: FontWeight.w700,
+                        fontSize: 15,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 10),
                 SizedBox(
                   height: 110,
                   child: ListView(
