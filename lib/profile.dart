@@ -1,7 +1,32 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class ProfileCard extends StatelessWidget {
   const ProfileCard({super.key});
+
+  final achievement = const <String>[
+    '🌐',
+    '🐍',
+    '🐧',
+    '🍵',
+    '💻',
+    '✒️',
+    '🏠',
+    '🔊',
+    '🔐',
+  ];
+
+  final List<String> imageurl = const [
+    'https://images.unsplash.com/photo-1550242499-b5171f56de56?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470',
+    'https://images.unsplash.com/photo-1605907153179-8b364644a241?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1630',
+    'https://images.unsplash.com/photo-1601942683467-990eb4b69224?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1450',
+    'https://images.unsplash.com/photo-1630858273073-ceef9c4d9504?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470',
+  ];
+
+  // challenge:
+  // tampilkan data image dari internet menggunakan list view
+  //
 
   @override
   Widget build(BuildContext context) {
@@ -95,14 +120,28 @@ class ProfileCard extends StatelessWidget {
                     ),
                   ),
                 ),
+                SizedBox(height: 10),
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.black,
+                    color: Color.fromRGBO(104, 180, 143, 1),
                     border: Border.all(color: Colors.black, width: 2),
+                    boxShadow: [
+                      BoxShadow(color: Colors.black, offset: Offset(4, 4)),
+                    ],
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text("~< 9 GRADE >~"),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 50,
+                      vertical: 5,
+                    ),
+                    child: Text(
+                      "~< 9 GRADE >~",
+                      style: TextStyle(
+                        fontFamily: 'RobotoMono',
+                        fontSize: 12,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
                   ),
                 ),
                 SizedBox(height: 15),
@@ -167,6 +206,8 @@ class ProfileCard extends StatelessWidget {
                   ),
                   child: Row(
                     children: [
+                      SizedBox(height: 1),
+                      // ignore: sized_box_for_whitespace
                       Container(
                         width: 60,
                         height: 60,
@@ -461,11 +502,51 @@ class ProfileCard extends StatelessWidget {
                         ),
                       ),
                     ),
-
-                    // container "tidur"
                   ],
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 15),
+                Container(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("~ My Achievement ~"),
+                  ),
+                ),
+                SizedBox(
+                  height: 110,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: achievement.map((e) {
+                      return Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          decoration: BoxDecoration(color: Colors.amberAccent),
+                          child: Center(
+                            child: Text('${e}', style: TextStyle(fontSize: 60)),
+                          ),
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                ),
+                SizedBox(
+                  height: 110,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: imageurl.map((e) {
+                      return Padding(
+                        padding: const EdgeInsets.all(0.8),
+                        child: Container(
+                          width: double.infinity,
+                          height: 100,
+                          decoration: BoxDecoration(color: Colors.black),
+                          child: Image.network(e, fit: BoxFit.cover),
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                ),
               ],
             ),
           ),
