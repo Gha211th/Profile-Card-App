@@ -345,18 +345,34 @@ class ProfileCard extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 15),
 
-                Container(
-                  decoration: BoxDecoration(
-                    color: Color.fromRGBO(102, 161, 216, 1),
-                    border: Border.all(color: Colors.black, width: 2),
-                    boxShadow: [
-                      BoxShadow(color: Colors.black, offset: Offset(5, 5)),
-                    ],
+                InkWell(
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(102, 161, 216, 1),
+                      border: Border.all(color: Colors.black, width: 2),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black, offset: Offset(5, 5)),
+                      ],
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        "<-More Detail->".toUpperCase(),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: 'RobotoMono',
+                          fontWeight: FontWeight.w600,
+                          fontSize: 10,
+                        ),
+                      ),
+                    ),
                   ),
-                  child: Text("<-More Detail->".toUpperCase()),
                 ),
+
+                SizedBox(height: 20),
                 // container "my schedule"
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10),
