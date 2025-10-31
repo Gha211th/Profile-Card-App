@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class DetailProfile extends StatelessWidget {
-  const DetailProfile({super.key});
+  final title;
+  const DetailProfile({this.title, super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text("hello there!")),
+        appBar: AppBar(title: Text("detail $title")),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
