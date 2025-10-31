@@ -4,6 +4,8 @@ import 'package:flutter_application_1/detail_profile.dart';
 class ProfileCard extends StatelessWidget {
   const ProfileCard({super.key});
 
+  final title = "Agha Ar-Rafif";
+
   final achievement = const <String>[
     '🌐',
     '🐍',
@@ -69,7 +71,7 @@ class ProfileCard extends StatelessWidget {
                       right: 15.0,
                     ),
                     child: Text(
-                      "Agha Ar-Rafif".toUpperCase(),
+                      "$title".toUpperCase(),
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w800,

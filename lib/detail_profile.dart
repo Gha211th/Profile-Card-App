@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/profile.dart';
 
 class DetailProfile extends StatelessWidget {
   const DetailProfile({super.key});
@@ -10,16 +9,21 @@ class DetailProfile extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: Text("hello there!")),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text("back to home".toUpperCase()),
-                ),
-                Text("Detail page"),
-              ],
+            Center(
+              child: Column(
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                      // navigator.pop untuk close halaman
+                    },
+                    child: Text("back to home".toUpperCase()),
+                  ),
+                  Text("Detail page"),
+                ],
+              ),
             ),
           ],
         ),
