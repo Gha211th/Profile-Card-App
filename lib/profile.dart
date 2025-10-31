@@ -346,29 +346,43 @@ class ProfileCard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                // container "my schedule"
+
                 Container(
-                  width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color.fromRGBO(255, 72, 72, 1),
+                    color: Color.fromRGBO(102, 161, 216, 1),
                     border: Border.all(color: Colors.black, width: 2),
                     boxShadow: [
                       BoxShadow(color: Colors.black, offset: Offset(5, 5)),
                     ],
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 10,
-                      horizontal: 50,
+                  child: Text("<-More Detail->".toUpperCase()),
+                ),
+                // container "my schedule"
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(255, 72, 72, 1),
+                      border: Border.all(color: Colors.black, width: 2),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black, offset: Offset(5, 5)),
+                      ],
                     ),
-                    child: Text(
-                      "~ My Schedule ~",
-                      style: TextStyle(
-                        fontFamily: 'RobotoMono',
-                        fontWeight: FontWeight.w700,
-                        fontSize: 15,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 10,
+                        horizontal: 50,
                       ),
-                      textAlign: TextAlign.center,
+                      child: Text(
+                        "~ My Schedule ~",
+                        style: TextStyle(
+                          fontFamily: 'RobotoMono',
+                          fontWeight: FontWeight.w700,
+                          fontSize: 15,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ),
                 ),
