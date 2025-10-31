@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/detail_profile.dart';
 
 class ProfileCard extends StatelessWidget {
   const ProfileCard({super.key});
@@ -348,6 +349,12 @@ class ProfileCard extends StatelessWidget {
                 SizedBox(height: 15),
 
                 InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (Context) => DetailProfile()),
+                    );
+                  },
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.4,
                     decoration: BoxDecoration(
@@ -643,18 +650,6 @@ class ProfileCard extends StatelessWidget {
                         ),
                       );
                     }).toList(),
-                  ),
-                ),
-                SizedBox(
-                  height: 110,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: imgaeList.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return CircleAvatar(
-                        backgroundImage: NetworkImage('${imgaeList[index]}'),
-                      );
-                    },
                   ),
                 ),
               ],
